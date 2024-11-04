@@ -1,12 +1,4 @@
-CREATE DATABASE Tester;
-       
-CREATE TABLE WeatherData (
-  id UNIQUEIDENTIFIER PRIMARY KEY,
-  date DATE NOT NULL,
-  temperature DECIMAL(10, 2) NOT NULL,
-  summary VARCHAR(255) NULL
-);
-
+-- SQL
 select * from weatherdata (nolock) order by id asc;
 
 truncate table weatherdata;
@@ -28,3 +20,7 @@ ORDER BY DDIPS.avg_fragmentation_in_percent desc
 
 ALTER INDEX PK__WeatherD__3213E83F373B5682 ON WeatherData REBUILD WITH(ONLINE=ON)
 
+
+-- Postgres
+-- Check link https://minervadb.xyz/how-to-troubleshoot-index-fragmentation-in-postgresql/
+      
